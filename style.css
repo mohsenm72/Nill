@@ -1,0 +1,137 @@
+/* فونت و تنظیمات کلی */
+body {
+  margin: 0;
+  font-family: 'Vazir', sans-serif;
+  background-color: #f5f6fa;
+  color: #333;
+  line-height: 1.8;
+  scroll-behavior: smooth; /* برای اسکرول نرم در همه مرورگرها */
+}
+
+/* بخش بالای سایت */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url("img/me.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.hero h2 {
+  font-size: 20px;
+  font-weight: 300;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+.hero button {
+  background: linear-gradient(90deg, #0072ff, #00c6ff);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 30px;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+}
+
+/* بخش درباره من و مهارت‌ها */
+section {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+section h3 {
+  text-align: center;
+  color: #0072ff;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+section p {
+  text-align: justify;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills li {
+  background: #e3f2fd;
+  margin: 8px 0;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+/* بخش تماس */
+.contact {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+}
+
+.contact.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact a {
+  color: #0072ff;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* فوتر */
+footer {
+  text-align: center;
+  background: #0072ff;
+  color: white;
+  padding: 15px 0;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+/* انیمیشن‌ها */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* واکنش‌گرا برای موبایل */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+  .hero h2 {
+    font-size: 16px;
+  }
+  section {
+    margin: 40px auto;
+  }
+}
